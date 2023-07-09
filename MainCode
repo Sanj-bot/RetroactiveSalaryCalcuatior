@@ -1,0 +1,44 @@
+//Written on: 09/07/2023
+#include<iostream>
+
+using namespace std;
+int main()
+{
+  cout<<"Hello this is a project for calculating pay increase retroactive for 6 months\n\n"<<endl;
+  
+  while(true)
+  {
+  	float percent;
+  	percent=7.6;// percent is additional
+  	float prevSalary;
+  	cout<<"Please enter previous salary"<<endl;
+  	cin>>prevSalary;//100 is input
+  	const float payIncrease=(percent*prevSalary)/100;
+	prevSalary=prevSalary/12;// Note: prevSalary was annual, which i converted to monthly
+	int retPayDue;// for 6 months
+  	int noOfMonths;
+  	cout<<"Please enter no. of months"<<endl;
+  	cin>>noOfMonths;
+  	
+  	retPayDue=payIncrease*noOfMonths;
+  	cout<<"The pay due for last: "<<noOfMonths<<" months was: "<<retPayDue<<endl;
+  	int newSalary;
+  	newSalary=prevSalary+payIncrease;
+  	cout<<"The new yearly salary is: "<<newSalary*12<<" and The new monthly salary is: "<<newSalary<<endl;
+  	bool quit;
+	cout<<"Wanna continue then enter 0"<<endl;
+	cin>>quit;
+	if(quit==0)
+	{
+		continue;
+	}
+	else
+	{
+		break;
+	}
+	
+	
+  
+  	
+  }
+}
